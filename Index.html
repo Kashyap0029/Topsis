@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TOPSIS Decision Tool</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background-color:;
+        }
+
+        .container {
+            width: 360px;
+            margin: 80px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color:;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color:;
+        }
+
+        .hint {
+            font-size: 12px;
+            color:;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>TOPSIS Calculator</h2>
+
+    <form action="/submit" method="post" enctype="multipart/form-data">
+
+        <label>Upload CSV File</label>
+        <input type="file" name="file" required>
+
+        <label>Criteria Weights</label>
+        <input type="text" name="weights" placeholder="e.g. 1,1,1,1" required>
+        <div class="hint">Comma separated values</div>
+
+        <label>Criteria Impacts</label>
+        <input type="text" name="impacts" placeholder="e.g. +,+,-,+" required>
+        <div class="hint">Use + for benefit, - for cost</div>
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="example@email.com" required>
+
+        <button type="submit">Run TOPSIS</button>
+
+    </form>
+</div>
+
+</body>
+</html>

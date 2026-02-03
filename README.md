@@ -1,49 +1,26 @@
 # Topsis
 
 ---
+# TOPSIS Calculator
 
-## ⚙️ Methodology (TOPSIS Steps)
+This project is a simple TOPSIS-based decision support tool that allows users to upload a dataset, specify criteria weights and impacts, and compute rankings using the TOPSIS method.
 
-1. Normalize the decision matrix  
-2. Apply weights to the normalized matrix  
-3. Determine ideal best and ideal worst solutions  
-4. Compute distance from ideal best and worst  
-5. Calculate TOPSIS score  
-6. Rank alternatives based on scores  
+The application focuses on user input and processing, while the results are generated and saved as an output file.
 
----
+## 📌 Features
 
-## ✅ Result Table
+- CSV file upload support  
+- Input of criteria weights (comma-separated)  
+- Input of criteria impacts (`+` for benefit, `-` for cost)  
+- Backend computation using the TOPSIS algorithm  
+- Result generation in CSV format  
 
-The output table includes:
-- Original criteria values  
-- **TOPSIS Score** for each alternative  
-- **Rank** (1 = best alternative)
+## ⚙️ Working Principle
 
-Example result:
-
-| Fund | Topsis Score | Rank |
-|----|-------------|------|
-| M3 | 0.861481 | 1 |
-| M7 | 0.695464 | 2 |
-| M4 | 0.588547 | 3 |
-| M2 | 0.468008 | 4 |
-| M5 | 0.450754 | 5 |
-| M8 | 0.414151 | 6 |
-| M6 | 0.326624 | 7 |
-| M1 | 0.215165 | 8 |
-
-✔ Higher TOPSIS score indicates a better alternative.
+1. User uploads the CSV file  
+2. User enters weights and impacts  
+3. Data is processed using the TOPSIS method  
+4. Scores and ranks are calculated internally  
+5. Output is generated as a result file  
 
 ---
-
-## 📊 Result Graph
-
-A bar chart is generated to compare TOPSIS scores across alternatives.
-
-- **X-axis:** Alternatives (M1, M2, …)  
-- **Y-axis:** TOPSIS Score  
-- Helps in quick visual comparison  
-- Confirms ranking obtained from the table  
-
-Example visualization:

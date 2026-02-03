@@ -1,7 +1,5 @@
 # Topsis
 
----
-# TOPSIS Calculator
 
 This project is a simple TOPSIS-based decision support tool that allows users to upload a dataset, specify criteria weights and impacts, and compute rankings using the TOPSIS method.
 
